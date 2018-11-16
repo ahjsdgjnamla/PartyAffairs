@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colortestBottomtabText">#929292</color>
+    <color name="colortestBottomtabTextSelected">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="page_red">#A80B06</color>
+    <color name="tab_gb">#F3F5F4</color>
+    <color name="theme_color">#BF0F09</color>
+    <color name="NormalColor">#8e8e8e</color>
+    <color name="Light_Yellow">#E4BE78</color>
+</resources>

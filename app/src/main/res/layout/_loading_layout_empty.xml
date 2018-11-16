@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="318dp"
+        android:layout_height="318dp"
+        android:background="@mipmap/ic_bg"
+        >
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@id/empty_image"
+            android:layout_width="222dp"
+            android:layout_height="147dp"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_unentiy"
+            android:layout_marginTop="72dp"
+            />
+        <TextView
+            android:id="@id/empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:text="暂无数据"
+            tools:textColor="#333333"
+            android:layout_marginTop="20dp"
+            tools:textSize="10sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/empty_image"
+            />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

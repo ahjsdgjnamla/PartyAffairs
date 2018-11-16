@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_cornor_10"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/id_ivDismiss"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@mipmap/ic_xx_dismiss"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_10"
+            android:padding="@dimen/dp_4"
+            />
+        <TextView
+            android:gravity="center"
+            android:text="提示"
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="4dp"
+            android:textColor="#333333"
+            android:layout_marginTop="7dp"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_56"
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginBottom="@dimen/dp_36"
+            android:layout_centerHorizontal="true"
+            style="@style/TextViewCustomFont1"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_46"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:gravity="center"
+            android:layout_below="@+id/tv_msg"
+            >
+
+            <Button
+                android:id="@+id/btn_cancle"
+                android:layout_width="@dimen/dp_84"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center"
+                android:text="后悔啦"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/sp_10"
+                style="@style/TextViewCustomFont1"
+                />
+            <Button
+                android:id="@+id/btn_sure"
+                android:layout_width="@dimen/dp_84"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center"
+                android:text="决定啦"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/sp_10"
+                style="@style/TextViewCustomFont1"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

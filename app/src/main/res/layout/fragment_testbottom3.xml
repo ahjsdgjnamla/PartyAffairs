@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_toobar"/>
+
+    <!--套上AppBarLayout设置阴影属性0dp可取消阴影-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/theme_color"
+            android:id="@+id/tabs"
+            app:tabIndicatorHeight="@dimen/dp_2"
+            app:tabIndicatorColor="@color/tab_gb"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.hrdl.partyaffairs.view.CustomViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpager"
+        android:background="@color/white">
+
+    </com.hrdl.partyaffairs.view.CustomViewPager>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="QMUI.Compat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--加粗黑体-->
+    <style name="TextViewCustomFont">
+        <item name="fontPath">fonts/FZLanTingHeiS-DB1-GB-Regular.TTF</item>
+    </style>
+    <!--正常字体-->
+    <style name="TextViewCustomFont1">
+        <item name="fontPath">fonts/FZLanTingHeiS-L-GB-Regular.TTF</item>
+    </style>
+
+    <!--对话框的样式-->
+    <style name="NormalDialogStyle1">
+        <!--对话框背景 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否浮现在Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!--背景透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 是否有覆盖 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--进出的显示动画 -->
+        <!--<item name="android:windowAnimationStyle">@style/normalDialogAnim1</item>-->
+        <!--背景变暗-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 设置背景透明度 -->
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <!--TabLayout选中状态-->
+    <style name="TabLayoutStyle_Select">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--TabLayout未选中状态-->
+    <style name="TabLayoutStyle_UnSelect">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--请求权限的对话框样式-->
+    <style name="ThemeSplash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@mipmap/jiazai</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

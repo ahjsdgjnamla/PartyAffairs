@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.hrdl.partyaffairs.view.CustomViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"/>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_49"
+        android:id="@+id/id_testbottomtab_mui"
+        layout="@layout/tab_bottom1"
+        android:layout_alignParentBottom="true"/>
+</LinearLayout>

@@ -1,0 +1,127 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.hrdl.partyaffairs"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // 设置支持multidex
+        multiDexEnabled true
+        //设置支持dataBinding
+        dataBinding {
+            enabled = true
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'x86', 'x86_64', 'mips64'
+        }
+    }
+    signingConfigs {
+        //签名配置
+        release {
+            //发布版签名配置
+            storeFile file('../Key0')//密钥文件路径
+            storePassword "hr123456"//密钥文件密码
+            keyAlias "hrdl"//key别名
+            keyPassword "hr123456"//key密码
+        }
+        debug {
+            //debug版签名配置
+            storeFile file('../Key0')
+            storePassword "hr123456"
+            keyAlias "hrdl"
+            keyPassword "hr123456"
+        }
+
+    }
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        jcenter() // If not already there
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    //android studio默认so文件加载目录为:src/main/jniLibs
+    //如在module的build.gradle按照如下方式,自定义了so文件加载目录请确保对应目录下只有armeabi目录
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    implementation rootProject.ext.libSupportV7
+    implementation rootProject.ext.libSupportDesign
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible,GradleDynamicVersion
+    implementation 'com.android.support:cardview-v7:28+'
+    implementation 'com.android.support:recyclerview-v7:28+'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    /*第三方库依赖*/
+    //沉浸式状态栏
+    implementation 'com.gyf.immersionbar:immersionbar:2.3.2-beta03'
+    //QMUI基础库
+    implementation 'com.qmuiteam:qmui:1.1.3'
+    //动态运行权限（远程依赖）
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.1@aar'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.0'
+    //注解，省去findviewbyid
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.jakewharton:butterknife-compiler:8.8.1'
+    //65535方法数超出解决方法（远程依赖）
+    implementation 'com.android.support:multidex:1.0.3'
+    //招商银行app引用的选择器，支持各种选择
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
+    //高效加载字体包
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    //圆形imageView（远程依赖）
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    //网络请求框架（远程依赖）
+    implementation 'com.lzy.net:okgo:3.0.4'
+    //APP更新/地址：https://github.com/WVector/AppUpdate#%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E（远程依赖）
+    implementation 'com.qianwen:update-app:3.5.2'
+    //知乎相册选取
+    implementation 'com.zhihu.android:matisse:0.5.2-beta3'
+    //图片加载框架
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    //图片查看过度组件
+    implementation project(':Transferee')
+    //下拉刷新上拉加载（远程依赖）
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14'
+    //广告轮播（远程依赖）
+    implementation 'com.youth.banner:banner:1.4.10'
+    //一个方便为Android View添加自然的阴影的库
+    implementation 'com.github.zhengcx:ShadowHelper:v1.0'
+    //富文本解析器，支持Html和Markdown（module依赖）
+    implementation 'com.zzhoujay.richtext:richtext:2.5.+'
+    //圆角图片
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+}

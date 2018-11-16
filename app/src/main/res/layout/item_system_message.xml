@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/id_btn"
+    >
+
+    <View
+        android:id="@+id/vMessage"
+        android:layout_width="@dimen/dp_8"
+        android:layout_height="@dimen/dp_8"
+        android:background="@drawable/bg_oval_orange"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="是否"
+        android:textSize="@dimen/sp_14"
+        android:textColor="#333333"
+        style="@style/TextViewCustomFont1"
+        android:layout_toRightOf="@+id/check_box"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_17"
+        android:layout_marginBottom="@dimen/dp_17"
+        />
+    <ImageView
+        android:id="@+id/check_box"
+        android:src="@mipmap/ic_uncheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_alignParentRight="true"
+        android:text="2018-10-01 14:00:00"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:textSize="@dimen/sp_10"
+        android:layout_marginRight="@dimen/dp_15"
+        android:id="@+id/send_time"
+        android:textColor="@color/NormalColor"/>
+
+</RelativeLayout>
